@@ -8,7 +8,10 @@ import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { LoginView } from '../login-view/login-view';
 import { RegistrationView } from '../registration-view/registration-view';
-
+import { DirectorView } from '../director-view/director-view';
+import { GenreView } from '../genre-view/genre-view';
+import { ProfileView } from '../profile-view/profile-view';
+import { ProfileUpdate } from '../profile-update/profile-update';
 
 import { Button } from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -80,7 +83,6 @@ export class MainView extends React.Component {
 
     // Before the movies have been loaded
     if (!movies) return <div className="main-view" />;
-
     return (
       <Router>
         <div className="main-view">
@@ -114,7 +116,21 @@ export class MainView extends React.Component {
           <Route exact path="/movies/:movieId" render={({ match }) =>
             <MovieView movie={movies.find(m => m._id === match.params.movieId)} />} />
 
+          <Route exact path="/genres/:name" render={({ match }) => {
+            if (!movies) return <div className="main-view" />
+            return <GenreView genre={movies.find(m => m.Genre.Name === match.params.name).Genre} />
+          }} />
 
+          <Route path="/directors/:name" render={({ match }) => {
+            if (!movies) return <div className="main-view" />
+            return <DirectorView director={movies.find(m => m.Director.Name === match.params.name).Director} />
+          }} />
+
+          <Route exact path="/users/:username" render={() => <ProfileView movies={movies} />} />
+
+
+          <Route exact path="/users/:username/update" render={() =>
+            <ProfileUpdate movies={movies} />} />
 
           <Route path="/logout" render={() => <LoginView />} />
         </div>

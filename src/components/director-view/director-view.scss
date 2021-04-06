@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet');
+
+body {
+  background-color: #e4ecf2;
+  font-family: Source Sans Pro;
+}
+
+.director-view{
+  position: fixed;
+  padding-right: 30%;
+  padding-left: 30%;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  color: black;
+  justify-content: center;
+ 
+}

@@ -20,17 +20,17 @@ export class MovieCard extends React.Component {
       <Card style={{ width: '16rem' }} className="movie-card mt-3 border border-dark rounded">
         <Card.Img variant="top" src={movie.ImagePath} />
         <Card.Body>
-          <Card.Title>{movie.Title}</Card.Title>
+          <Card.Title className='Title' >{movie.Title}</Card.Title>
           <Link to={`/movies/${movie._id}`}>
-            <Button variant="link" style={{ background: 'blue' , color: 'white' }}>Open</Button>
+            <Button variant="link" style={{ background: 'teal' , color: 'white' }}>Open</Button>
           </Link>
           <div></div>
           <Link to={`/directors/${movie.Director.Name}`}>
-            <Button variant="link" style={{ background: '#003300' , color: 'white' }}>Director</Button>
+            <Button variant="link" style={{ background: 'lightgrey' , color: 'black' }}>Director</Button>
           </Link>
           <div></div>
           <Link to={`/genres/${movie.Genre.Name}`}>
-            <Button variant="link" style={{ background: 'purple' , color: 'white' }}>Genre</Button>
+            <Button variant="link" style={{ background: 'teal' , color: 'white' }}>Genre</Button>
           </Link>
         </Card.Body>
       </Card>
