@@ -28,14 +28,15 @@
     "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
-    "parcel-bundler": "^1.10.1"
+    
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "sass": "^1.32.8"
+    "sass": "^1.32.8",
+    "parcel-bundler": "^1.10.1"
   },
   "description": ""
 }
