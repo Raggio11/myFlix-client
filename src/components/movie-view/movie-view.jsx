@@ -32,14 +32,17 @@ export class MovieView extends React.Component {
 
     if (!movie) return null;
 
-    return (<div>
+    return (
+    <div>
       <div className="movie-view">
         <section className="movie-poster-section">
           <img className="movie-poster" src={movie.ImagePath} />
+          <br></br>
           <div className="movie-poster-buttons">
             <Button onClick={() => this.addToFavoriteMovies(movie)} className="button-add-favorite" style={{ background: 'green' }}>Add to Favorite Movies</Button>
           </div>
         </section>
+        <div className='movie-info'>
         <div className="movie-title">
           <span className="label">Title: </span>
           <span className="value">{movie.Title}</span>
@@ -56,6 +59,10 @@ export class MovieView extends React.Component {
           <span className="label">Director: </span>
           <span className="value">{movie.Director.Name}</span>
         </div>
+        </div>
+        <Link to={'/'}>
+            <Button variant='link' className='director-backbutton'>Go Back</Button>
+          </Link>
       </div>
       </div>
     );
