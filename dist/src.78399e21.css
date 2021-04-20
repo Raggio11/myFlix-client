@@ -30,13 +30,12 @@ body {
 
 .movie-poster {
   margin-top: 20%;
-  margin-left: 10%;
-  margin-right: 55%;
-  justify-content: right;
-  text-align: right;
-  align-items: right;
+  padding-left: 33%;
+  align-content: right;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   display: grid;
-  right: 50%;
 }
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet');
 body {

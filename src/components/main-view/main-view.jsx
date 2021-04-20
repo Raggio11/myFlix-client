@@ -12,6 +12,7 @@ import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { ProfileView } from '../profile-view/profile-view';
 import { ProfileUpdate } from '../profile-update/profile-update';
+import NavBar from '../common/NavBar';
 
 import { Button } from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -85,6 +86,7 @@ export class MainView extends React.Component {
     if (!movies) return <div className="main-view" />;
     return (
       <Router>
+
         <div className="main-view">
           <Container className="container">
             <Navbar collapseOnSelect expand="lg" className="fixed-top navbar-main">
